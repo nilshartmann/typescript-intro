@@ -1,6 +1,9 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
-    "node_modules/": true
-  }
+    "node_modules/": true,
+    "dist/**/*.map":true
+  },
+    "editor.snippetSuggestions":"none",
+    "editor.parameterHints": true
 }

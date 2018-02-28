@@ -1,5 +1,5 @@
 {
-  "name": "vscode-typescript-starter",
+  "name": "typescript-intro",
   "version": "1.0.0",
   "main": "dist/main.js",
   "license": "MIT",
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch",
+    "watch": "yarn run clean && tsc --watch",
     "start": "node dist/main.js",
     "clean": "rimraf dist/",
     "prettier": "prettier --write \"{src}/**/*.{js,jsx,ts,tsx}\""

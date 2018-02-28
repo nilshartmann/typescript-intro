@@ -1,4 +1,4 @@
-class Hello {
+export default class Hello {
   constructor(public name: string) {}
 
   sayHello(g: string) {
