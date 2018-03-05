@@ -1,24 +1,18 @@
 interface DataSourceConfig {
   // TODO add URL that might be null
-  // TOD add Authentication that can be object or BasicAuth (=> String)
-  // TODO add Database
+  // TOD add Authentication that can be STRING or OBJECT
 }
 
 interface DataSource {
-  // simple DataSource
+  // empty object...
 }
 
 export function createDataSource() {
   // TODO
   // use URL from config
+  // use authentication
 }
 
 function isBasicAuth() {
   // check if string
-}
-
-function initDatabase() {
-  // TODO:
-  // return db-specific initializer
-  // handle never case
 }
