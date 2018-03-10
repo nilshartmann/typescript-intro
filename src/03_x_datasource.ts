@@ -1,10 +1,14 @@
 export default undefined;
 
+/** Authentication with username and password */
 interface UsernamePasswordAuthentication {
   username: string;
   password: string;
 }
 
+/**
+ * Authentication by password only
+ */
 type SimpleAuthentication = string;
 
 interface DataSourceConfig {
