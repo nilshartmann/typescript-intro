@@ -4,11 +4,11 @@
 
 1.  Add ts-check to 01_person.js and fix errors
 
-2.  Basics (string, infer type from variable and function, define function parameters etc)
+2.  Basics (string, infer type from variable and function, define function parameters, classes etc)
 
-3.  DataSource
+3.  Interfaces and Type Guards // Example: DataSource
 
-4.  Query
+4.  Discriminated Unions // Example: Query objects
 
 5.  debug
     Make sure, DEBUG CONSOLE is open during debugging

@@ -1,3 +1,6 @@
+// Example: Interfaces - describe the shape of an object
+// Example: Type Guards
+
 interface DataSourceConfig {
   // TODO add URL that might be null
   // TOD add Authentication that can be STRING or OBJECT

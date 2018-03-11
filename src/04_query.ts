@@ -1,3 +1,5 @@
+// Example: Discriminated (Tagged) Unions
+
 // TODO:
 //  Define 3 Query Delete, Insert, Select
 //  Add executeQuery-Stub
@@ -7,17 +9,14 @@
 //  Add 4th Query
 
 interface DeleteQuery {
-  queryType: "DELETE";
   primaryKey: number;
 }
 
 interface InsertQuery {
-  queryType: "INSERT";
   values: { [key: string]: string };
 }
 
 interface SelectQuery {
-  queryType: "SELECT";
   condition: string;
 }
 
