@@ -1,5 +1,6 @@
 // Example: Interfaces - describe the shape of an object
 // Example: Type Guards
+// structural identity
 
 interface DataSourceConfig {
   // TODO add URL that might be null
