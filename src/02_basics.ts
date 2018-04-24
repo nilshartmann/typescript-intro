@@ -1,5 +1,6 @@
 // hack: make sure this module is "private"
 export default undefined;
+
 // type assignment
 // basic types (string, number, boolean, void, array)
 // type inference
@@ -9,4 +10,6 @@ export default undefined;
 // nullable types with function args
 // type alias for null and undefined
 // classes
-// enums
+//   convient constructor
+// enum
+// compiled code!
