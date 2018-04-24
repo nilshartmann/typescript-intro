@@ -6,5 +6,6 @@ export default class Hello {
   }
 }
 
-const h = new Hello("Nils");
-console.log(h.sayHello("Hello"));
+const hello = new Hello("Nils");
+const greet = hello.sayHello("Hello");
+console.log(greet);

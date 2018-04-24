@@ -1,3 +1,5 @@
+// hack: make sure this module is "private"
+export default undefined;
 // type assignment
 // basic types (string, number, boolean, void, array)
 // type inference
