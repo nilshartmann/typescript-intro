@@ -6,6 +6,6 @@
     "slides/": true
   },
     "editor.snippetSuggestions":"none",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "breadcrumbs.enabled": false
   }
