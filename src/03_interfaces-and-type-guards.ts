@@ -1,3 +1,4 @@
+export default undefined;
 // Example: Interfaces - describe the shape of an object
 // Example: Type Guards
 // structural identity

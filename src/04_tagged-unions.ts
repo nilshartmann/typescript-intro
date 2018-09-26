@@ -1,3 +1,4 @@
+export default undefined;
 // Example: Discriminated (Tagged) Unions
 
 // TODO:
@@ -20,4 +21,4 @@ interface SelectQuery {
   condition: string;
 }
 
-export default function executeQuery() {}
+function executeQuery() {}
