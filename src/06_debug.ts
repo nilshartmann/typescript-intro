@@ -1,3 +1,6 @@
+// treat this as private module
+export default undefined;
+
 let pkCounter = 0;
 
 function newPrimaryKey() {
