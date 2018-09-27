@@ -7,5 +7,7 @@
   },
     "editor.snippetSuggestions":"none",
     "editor.fontLigatures": false,
-    "breadcrumbs.enabled": false
+    "editor.cursorStyle": "line",
+    "breadcrumbs.enabled": false,
+    "editor.showUnused": false
   }
