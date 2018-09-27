@@ -9,5 +9,6 @@
     "editor.fontLigatures": false,
     "editor.cursorStyle": "line",
     "breadcrumbs.enabled": false,
-    "editor.showUnused": false
+    "editor.showUnused": false,
+    "tslint.enable": false
   }
