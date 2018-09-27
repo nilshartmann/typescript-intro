@@ -7,7 +7,7 @@ export default undefined;
 //  any and implicit any
 // function args
 // functions
-// nullable types with function args
+// nullable types with function args (diff between null and undef)
 // type alias for null and undefined
 // classes
 //   convient constructor
