@@ -1,9 +1,11 @@
+export default undefined;
+
 /**
  * @param {string} name  The name
  * @param {number} age The age
  * @param {string|undefined} [hobby] The person's hobby
  */
-export function newPerson(name, age, hobby) {
+function newPerson(name, age, hobby) {
   const p = {
     nane,
     age,
@@ -13,7 +15,7 @@ export function newPerson(name, age, hobby) {
   };
 }
 
-export function getAdultAge() {
+function getAdultAge() {
   return "18";
 }
 
