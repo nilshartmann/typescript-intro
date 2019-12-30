@@ -1,11 +1,24 @@
-export default class Hello {
-  constructor(public name: string) {}
+(function() {
+  let pkCounter = 0;
 
-  sayHello(g: string) {
-    return `${g}, ${this.name}`;
+  function newPrimaryKey() {
+    const p = ++pkCounter;
+    return p;
   }
-}
 
-const hello = new Hello("Nils");
-const greet = hello.sayHello("Hello");
-console.log(greet);
+  class Person {
+    primaryKey: number;
+    constructor(private name: string, private age: number) {
+      this.primaryKey = newPrimaryKey();
+    }
+
+    sayHello() {
+      const greet = `Hello, ${this.name}`;
+      return greet;
+    }
+  }
+
+  const p = new Person("Klaus", 34);
+  const hello = p.sayHello();
+  console.log(hello);
+})();

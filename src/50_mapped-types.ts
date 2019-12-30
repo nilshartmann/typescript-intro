@@ -39,11 +39,15 @@ async function patchPerson(p: Person) {
 }
 
 const klaus = {
+  id: "1",
+  name: "Klaus",
+  age: 34,
   hobby: "TypeScript!"
 };
 
-// Welchen Typ nehmen wir hier ???
-patchPerson(klaus); //
+patchPerson(klaus); // OK
+
+// ... aber wie verwenden wir einen "Teil" der Person?
 
 // -----------------------------------------------------------------------------------------
 

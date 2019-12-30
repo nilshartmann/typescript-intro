@@ -6,8 +6,7 @@
       "type": "node",
       "request": "launch",
       "name": "Run DEBUG Example",
-      "program": "${workspaceRoot}/dist/06_debug.js",
-      "preLaunchTask": "build",
+      "program": "${workspaceRoot}/dist/main.js",
       "outFiles": ["${workspaceRoot}/dist/**/*.js"]
     }
   ]
