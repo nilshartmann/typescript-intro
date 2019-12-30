@@ -9,16 +9,18 @@ export default undefined;
 //  Implement failOnUnknownQueryType
 //  Add 4th Query
 
-interface DeleteQuery {
+//  Factory-Functions for Queries
+
+type DeleteQuery = {
   primaryKey: number;
-}
+};
 
-interface InsertQuery {
+type InsertQuery = {
   values: { [key: string]: string };
-}
+};
 
-interface SelectQuery {
+type SelectQuery = {
   condition: string;
-}
+};
 
 function executeQuery() {}

@@ -3,13 +3,14 @@ export default undefined;
 // Example: Type Guards
 // structural identity
 
+interface UsernamePasswordAuthentication {
+  username: string;
+  password: string;
+}
+
 interface DataSourceConfig {
   // TODO add URL that might be null
   // TOD add Authentication that can be STRING or OBJECT
-}
-
-interface DataSource {
-  // empty object...
 }
 
 export function createDataSource() {
@@ -18,6 +19,6 @@ export function createDataSource() {
   // use authentication
 }
 
-function isBasicAuth() {
+function isBasicAuth(candidate: any) {
   // check if string
 }

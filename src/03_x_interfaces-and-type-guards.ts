@@ -1,20 +1,20 @@
 export default undefined;
 
 /** Authentication with username and password */
-interface UsernamePasswordAuthentication {
+type UsernamePasswordAuthentication = {
   username: string;
   password: string;
-}
+};
 
 /**
  * Authentication by password only
  */
 type SimpleAuthentication = string;
 
-interface DataSourceConfig {
+type DataSourceConfig = {
   url: string | null;
   authentication: UsernamePasswordAuthentication | SimpleAuthentication;
-}
+};
 
 const baseConfig: DataSourceConfig = {
   url: "http://www.voxxedvienna.at",
@@ -25,9 +25,7 @@ const config: DataSourceConfig = baseConfig;
 
 createDataSource(config);
 
-interface DataSource {}
-
-function createDataSource(config: DataSourceConfig): DataSource {
+function createDataSource(config: DataSourceConfig) {
   if (config.url !== null) {
     const myUrl = config.url.toLocaleLowerCase();
   }
@@ -39,7 +37,6 @@ function createDataSource(config: DataSourceConfig): DataSource {
   }
 
   // return a datasource...
-  return {};
 }
 
 function isBasicAuth(candidate: any): candidate is SimpleAuthentication {
