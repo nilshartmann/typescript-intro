@@ -12,6 +12,8 @@ export default undefined;
 // nullable types with function args (diff between null and undef)
 // type alias for null and undefined
 
+// null chaining
+
 // SPRACH ERWEITERUNGEN:
 // classes
 //   convient constructor

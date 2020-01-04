@@ -1,7 +1,34 @@
 export default undefined;
-// [P in keyof OBJECT]?: OBJECT[P];
-// type P1 = keyof Person; // name | age
-// type X = Person[name] // string
+
+type Employee = {
+  name: string;
+  salary: number;
+
+  department: {
+    title: string;
+    location: string;
+  };
+};
+// welcher Typ ist Department?
+type Department = any;
+
+function printDepartment(department: Department) {
+  console.log(department.location.toUpperCase());
+}
+
+const susi = {
+  name: "Susi",
+  salary: 75000,
+  department: {
+    title: "Software Development",
+    location: "3rd floor"
+  }
+};
+
+// 😮😮😮
+printDepartment(susi);
+
+// ---------------------------------------------------------------------------------------
 
 type Person = {
   id: string;
@@ -10,26 +37,6 @@ type Person = {
   hobby: string;
 };
 
-// -----------------------------------------------------------------------------------------
-
-// welcher Typ ist hobby?
-type Hobby = any;
-
-function printHobby(hobby: Hobby) {
-  console.log(hobby.toUpperCase());
-}
-
-const susi = {
-  id: "fasdfasdf",
-  name: "Susi",
-  age: 32,
-  hobby: "JavaScript"
-};
-
-// 😮😮😮
-printHobby(susi);
-
-// -----------------------------------------------------------------------------------------
 async function patchPerson(p: Person) {
   // send this to our REST API...
   await fetch("/api/person", {
