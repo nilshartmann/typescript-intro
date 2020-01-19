@@ -1,3 +1,4 @@
+// https://codemix.com/opaque-types-in-javascript/
 function saveBIC(bic: BIC) {}
 
 type BIC = string & {
