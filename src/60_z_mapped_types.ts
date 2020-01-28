@@ -29,15 +29,15 @@ const susi: Employee = {
   department: "Software Development"
 };
 
-function validateEmployee(emp: Employee) {
+function validateEmployee(emp: Employee): ValidatedEmployee {
   console.log(emp);
 
+  // ===> what happens if we add "city: 'Hamburg'" to the returned object?
   return {
     name: emp.name.length > 3,
     salary: emp.salary > 70000,
-    department: emp.name.length > 10,
-    city: "Hamburg"
-  } as ValidatedEmployee;
+    department: emp.name.length > 10
+  };
 }
 
 const validationResult = validateEmployee(susi);

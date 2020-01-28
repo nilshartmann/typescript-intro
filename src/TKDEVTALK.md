@@ -28,7 +28,7 @@
 - Beispiel: Actions in einer View (Actions kommen vom Server, wir erzeugen sie nicht)
   - verifyBic, verifyAge
 
-# Typen Ableiten für die Actions (10 Minuten mit Diskussion)
+# Typen Ableiten für die Actions (10 Minuten mit Diskussion, ggf. streichen)
 
 - ReturnType
 - Pro und Contra Action Creators
@@ -38,7 +38,6 @@
 - saveBIC
 - loadBIC
 
-# Mapped Types (5 Minuten)
+# Mapped Types (15 Minuten)
 
-- readonly und/oder Partial
-- Ausblick: conditional types für recursive readonly
+- Boolean und Optional
