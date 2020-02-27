@@ -10,6 +10,6 @@ person = function sayHello() {
   return "Hello";
 };
 
-person = null;
-
 person();
+
+person = null;
