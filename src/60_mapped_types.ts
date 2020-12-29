@@ -1,42 +1,54 @@
 export default undefined;
 
-// Welcher Typ ist Validated Employee?
-// 1. Hard codierter Typ mit booleans
-// 2. Hard codierter Typ mit optionals
-// 3. Generischer typ mit booleans, die optional sind
-// 4. Generischer Typ korrekt
-// 5. Was passiert, wenn wir in validateEmployee einen Employee mit zusätzlichem Feld zurückgeben?
-
-// IDEE: Wir haben eine Funktion, die ein Objekt validiert
-//       Sie gibt ein Objekt zurück, das genauso aussieht, wie das Objekt, aber mit boolean als Typen
-
-type Employee = {
+type Person = {
+  id: string;
   name: string;
-  salary: number;
-
-  department: string;
+  age: number;
+  hobby: string;
 };
 
-const susi: Employee = {
-  name: "Susi",
-  salary: 75000,
-  department: "Software Development"
-};
+async function patchPerson(p: Person) {
+  // ...wie können wir sicherstellen, dass in dieser Funktion
+  //    das übergebene Person-Objekt nicht verändert wird?
+  // 😱🙋‍♀️🙋‍♂️
 
-function validateEmployee(emp: Employee) {
-  return {
-    name: emp.name.length > 3,
-    salary: emp.salary > 70000,
-    department: emp.name.length > 10
-  };
+  await fetch("/api/person", {
+    method: "PATCH",
+    body: JSON.stringify(p)
+  });
 }
 
-const validationResult = validateEmployee(susi);
+const klaus = {
+  id: "1",
+  name: "Klaus",
+  age: 34,
+  hobby: "TypeScript!"
+};
 
-showValidationResult(validationResult);
+patchPerson(klaus); // OK
 
-type ValidatedEmployee = any;
+// ... aber wie verwenden wir einen "Teil" der Person?
+//     z.B., um nur die Id und das Alter zu "patchen"?
+// 😱🙋‍♀️🙋‍♂️
+const susi = {
+  id: "123",
+  age: 34
+};
+patchPerson(susi); // ???
 
-function showValidationResult(validationResult: ValidatedEmployee) {
-  //
+// -----------------------------------------------------------------------------------------
+
+// ... Für ein Formular zum Erfassen einer neuen Person benötigen wir ein Person-Objekt
+//     aber ohne 'id'-Feld (weil das erst später vergeben wird)
+//     -> wie erzeugen wir eine Person "ohne" Id
+// 😱🙋‍♀️🙋‍♂️
+type NewPerson = Person; // ... aber ohne Id-Feld ?!?!?!
+
+function enterNewPersonForm(): NewPerson {
+  // Keine Id hier!
+  return {
+    name: "Klaus",
+    age: 32,
+    hobby: "TypeScript"
+  };
 }

@@ -1,38 +1,54 @@
 export default undefined;
+// [P in keyof OBJECT]
+// type P1 = keyof Person; // name | age
+// type X = Person[name] // string
 
-type Employee = {
+type Person = {
+  id: string;
   name: string;
-  salary: number;
   age: number;
-
-  department: string;
+  hobby: string;
 };
 
-type ValidatedEmployee = {
-  [k in keyof Employee]?: boolean;
-};
+async function patchPerson(p: Readonly<Partial<Person>>) {
+  // modifying the object is now forbidden:
+  // p.age = 99;  // ERROR
 
-const susi: Employee = {
-  name: "Susi",
-  age: 32,
-  salary: 75000,
-  department: "Software Development"
-};
-
-function validateEmployee(emp: Employee): ValidatedEmployee {
-  console.log(emp);
-
-  return {
-    name: emp.name.length > 3,
-    salary: emp.salary > 70000,
-    department: emp.name.length > 10
-  };
+  // send this to our REST API...
+  await fetch("/api/person", {
+    method: "PATCH",
+    body: JSON.stringify(p)
+  });
 }
 
-const validationResult = validateEmployee(susi);
+const klaus = {
+  id: "1",
+  name: "Klaus",
+  age: 34,
+  hobby: "TypeScript!"
+};
 
-showValidationResult(validationResult);
+patchPerson(klaus); // OK - all required props set
 
-function showValidationResult(validationResult: ValidatedEmployee) {
-  //
+const susi = {
+  id: "123",
+  age: 34
+};
+patchPerson(susi); // OK: patchPerson expects partial type
+
+// -----------------------------------------------------------------------------------------
+
+// ... Für ein Formular zum Erfassen einer neuen Person benötigen wir ein Person-Objekt
+//     aber ohne 'id'-Feld (weil das erst später vergeben wird)
+//     -> wie erzeugen wir eine Person "ohne" Id
+// 😱🙋‍♀️🙋‍♂️
+type NewPerson = Omit<Person, "id">; // All fields from 'person', but remove "id"
+
+function enterNewPersonForm(): NewPerson {
+  // Keine Id hier!
+  return {
+    name: "Klaus",
+    age: 32,
+    hobby: "TypeScript"
+  };
 }
