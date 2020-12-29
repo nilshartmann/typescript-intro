@@ -1,4 +1,5 @@
 export default undefined;
+// "unique types": https://github.com/microsoft/TypeScript/pull/33038
 
 type Opaque<T, NAME> = T & {
   __tag__: NAME;
