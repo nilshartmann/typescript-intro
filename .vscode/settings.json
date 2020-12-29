@@ -3,7 +3,7 @@
   "files.exclude": {
     "node_modules/": true,
     "dist/**/*.map":true,
-    "slides/": true,
+    "slides/": false,
     "src_old/":true
   },
     "editor.snippetSuggestions":"none",
