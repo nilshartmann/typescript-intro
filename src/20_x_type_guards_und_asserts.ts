@@ -42,11 +42,11 @@ function fetchUser() {
 }
 
 function isSuccessResponse(candidate: Response): candidate is SuccessResponse {
-  return "success" in candidate;
+  return "data" in candidate;
 }
 
 function ensureValidResponse(candidate: any): asserts candidate is Response {
-  if ("error" in candidate || "response" in candidate) {
+  if ("error" in candidate || "data" in candidate) {
     return;
   }
 
