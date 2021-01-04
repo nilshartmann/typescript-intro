@@ -7,7 +7,7 @@ export default undefined;
 
 /**
  * @param {string} name  The name
- * @param {number} age The age
+ * @param {number} age The age
  * @param {string|undefined} [hobby] The person's hobby
  */
 export function newPerson(name, age, hobby) {
@@ -25,7 +25,7 @@ export function getAdultAge() {
 }
 
 const hans = newPerson("Hans", 34);
-hans.age;
+console.log(hans.age);
 
 const susi = newPerson("Susi");
 
