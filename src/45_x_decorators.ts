@@ -2,10 +2,84 @@ export default undefined;
 
 import "reflect-metadata";
 
-class Point {
-    x: number = 0;
-    y: number = 0;
+function sealed(constructor: Function) {
+    Object.seal(constructor);
+    Object.seal(constructor.prototype);
 }
+
+@sealed
+class Point {
+    constructor(protected readonly x: number = 0,
+        protected readonly y: number = 0) {
+    }
+}
+
+// class is sealed, will throw at runtime
+// (Point.prototype as any).add = function() { }
+
+function f() {
+    console.log("f(): evaluated");
+    return function (
+        target: any,
+        propertyKey: string,
+        descriptor: PropertyDescriptor
+    ) {
+        console.log("f(): called");
+    };
+}
+
+function g() {
+    console.log("g(): evaluated");
+    return function (
+        target: any,
+        propertyKey: string,
+        descriptor: PropertyDescriptor
+    ) {
+        console.log("g(): called");
+    };
+}
+
+function h(target: any,
+    propertyKey: string,
+    descriptor?: PropertyDescriptor
+) {
+    console.log("h(): called");
+    console.log(target === C.prototype);
+    console.log(propertyKey);
+    if (descriptor) {
+        console.log(descriptor.value);
+    }
+}
+
+const formatMetadataKey = Symbol("format");
+
+function format(formatString: string) {
+  return Reflect.metadata(formatMetadataKey, formatString);
+}
+
+function getFormat(target: any, propertyKey: string) {
+    return Reflect.getMetadata(formatMetadataKey, target, propertyKey);
+  }
+class C {
+    @f()
+    @g()
+    @h
+    method() { }
+
+    @h
+    a: number = -1;
+
+    @format("Hello, %s")
+    name: string = 'Olli';
+
+    printFormatted() {
+        const formatString = getFormat(this, "name");
+        return formatString.replace("%s", this.name);
+    }
+}
+
+const c = new C();
+console.log(c.printFormatted())
 
 class Line {
     private _p0: Point = new Point();
@@ -43,11 +117,9 @@ function validate<T>(
     };
 }
 
-const line:any = new Line();
+const line: any = new Line();
 line.p0 = new Point(); // cool
 // line.p1 = 'not a point'; // will throw at runtime
 
-
 // https://www.typescriptlang.org/docs/handbook/decorators.html#metadata
-// https://github.com/DJCordhose/inversify-playground
-// https://github.com/inversify/InversifyJS
+// https://rbuckton.github.io/reflect-metadata/
