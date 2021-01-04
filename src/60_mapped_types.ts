@@ -34,6 +34,7 @@ const susi = {
   id: "123",
   age: 34
 };
+// @ts-ignore
 patchPerson(susi); // ???
 
 // -----------------------------------------------------------------------------------------
@@ -46,6 +47,7 @@ type NewPerson = Person; // ... aber ohne Id-Feld ?!?!?!
 
 function enterNewPersonForm(): NewPerson {
   // Keine Id hier!
+  // @ts-ignore
   return {
     name: "Klaus",
     age: 32,
