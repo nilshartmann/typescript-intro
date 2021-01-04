@@ -52,3 +52,5 @@ function enterNewPersonForm(): NewPerson {
     hobby: "TypeScript"
   };
 }
+
+// https://www.typescriptlang.org/docs/handbook/utility-types.html

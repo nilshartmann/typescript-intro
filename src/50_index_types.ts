@@ -23,3 +23,5 @@ function printDepartment(department: Department) {
 }
 
 printDepartment(susi.department);
+
+// https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
