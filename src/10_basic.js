@@ -13,11 +13,3 @@ person = function sayHello() {
 person();
 
 person = null;
-
-// Übung: 
-// 1. Such dir eine Experimentierumgebung, 
-//  - z.B. dieses Repo mit Visual Studio Code https://github.com/nilshartmann/typescript-intro
-// - oder https://www.typescriptlang.org/play
-// 2. Bring den obigen Code nach TypeScript und entferne alle Fehler
-
-// Play-Link: https://www.typescriptlang.org/play?#code/DYUwLgBADiBODOB7AdhAvBARAaWAQwFd5MBuAKDJgRXQgGYAmcyuJVDMWAkZqt2gGYFkAYzABLGvDwBPABIhgwRAAoAlBADeZCBFjgCsVJgVLEpMgF9erFOpvV2EZASXkgA
