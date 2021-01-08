@@ -55,3 +55,4 @@ function ensureValidResponse(candidate: any): asserts candidate is Response {
 
 // https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types
 // https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards
+// https://www.typescriptlang.org/play?q=241#example/unknown-and-never

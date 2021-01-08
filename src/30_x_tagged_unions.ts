@@ -17,7 +17,7 @@ type VerifyAgeAction = {
 //   email: string;
 // };
 
-type Action = VerifyAgeAction | VerifyIbanAction;
+ type Action = VerifyAgeAction | VerifyIbanAction;
 
 function handleAction(action: Action) {
   switch (action.actionType) {
@@ -33,3 +33,6 @@ function handleAction(action: Action) {
 function handleInvalidAction(action: never) {
   throw new Error("Invalid Action!!!!");
 }
+
+// https://www.typescriptlang.org/play?q=129#example/union-and-intersection-types
+// https://www.typescriptlang.org/play?q=241#example/unknown-and-never

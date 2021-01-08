@@ -30,5 +30,6 @@ function isAvailable(candidate: any): candidate is Something {
 }
 
 
+
 // https://www.typescriptlang.org/play?q=241#example/unknown-and-never
 // https://www.typescriptlang.org/play?q=29#example/type-guards

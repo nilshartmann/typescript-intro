@@ -2,6 +2,7 @@ export default undefined;
 
 // AUFGABEN 🤔:
 // 1. Nutze die gegebene Taxonomie von Tieren und ein Array, das alle diese Tiere und nur diese enthalten kann.
+
 abstract class Animal {
 }
 
@@ -13,7 +14,7 @@ class Dog extends Animal {
 
 class Cat extends Animal {
     meow(): void {
-        console.log('bark')
+        console.log('meow')
     }
 }
 

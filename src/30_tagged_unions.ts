@@ -19,3 +19,6 @@ function handleAction(action: Action) {
   // wie unterscheiden wir die Actions hier ???
   // 😱🙋‍♀️🙋‍♂️
 }
+
+// https://www.typescriptlang.org/play?q=129#example/union-and-intersection-types
+// https://www.typescriptlang.org/play?q=241#example/unknown-and-never
