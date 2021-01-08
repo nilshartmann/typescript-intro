@@ -1628,6 +1628,45 @@ https://www.typescriptlang.org/docs/handbook/2/objects.html#interfaces-vs-inters
 
 </section>
 
+<section>
+<h3>object literal type checking</h3>
+<pre><code>
+type Basic = {
+  a: number;
+  b: string;
+}
+
+type BasicAndMore = Basic;
+
+const aha1: Basic = {
+  a: 10,
+  b: 'yo',
+  c: true // nope, assuming you did this in error
+};
+
+// works
+const aha2: Basic = {
+  a: 10,
+  b: 'yo',
+  c: true
+} as Basic;
+
+const more = {
+  a: 10,
+  b: 'yo',
+  c: true
+}
+
+// works as well
+const aha3: Basic = more;
+</code></pre>
+
+<a href='https://www.typescriptlang.org/play?ssl=1&ssc=1&pln=29&pc=1#code/PTAEHsCMCsFMGMAuoA2BLRsBOBDFpEBPAB1lHgAsEBrNAOwHMBYAKCNNACEcBnNeUAF5QAb1ahQOAFyg6AVwC2kbAG5xoSDJ6Is9BmpYBfVq3ZlufeAEE6AEwCy4LGWEX+B1vHB1tkijgBGGTcBYTEWCWlQAIAGABp1TVAAckJwZISI8hkdOTIQWXBSOMkeHkU9UDS5UFs0WwIKNB5QelBsLCdWQw8WLx9kHH8AJmDefiFRdSjYzIkk1PS57IIsPO7SrnH4Xv7fBScXKayZ+MSZRYz1eBy12G6TPu9fIZwAZjHLSYPnXqA'>
+  Code in Playground
+</a>
+</section>
+
+
 <section data-markdown>
   
 ## Inversify IoC Container

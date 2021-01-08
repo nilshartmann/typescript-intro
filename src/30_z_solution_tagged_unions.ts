@@ -19,9 +19,7 @@ class Cat {
     }
 }
 
-
 new Cat('Purry'); // cool
-new Cat('Brutus'); // not cool
-
+// new Cat('Brutus'); // not cool
 
 // https://www.typescriptlang.org/play?q=129#example/union-and-intersection-types
