@@ -21,7 +21,7 @@ data.push('a')
 //     // data: ["a", "b", "c", true]
 // }
 
-// Wir können einen eigenen generischen Typ bauen
+// Wir können einen eigenen generischen Typen bauen
 type ErrorResponse = { error: string };
 type SuccessResponse<T> = { data: T };
 type Response<T> = ErrorResponse | SuccessResponse<T>;

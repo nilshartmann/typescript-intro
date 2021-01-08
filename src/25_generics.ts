@@ -15,7 +15,7 @@ let response = {
     data: ["a", "b", "c", true]
 }
 
-// Nicht jedes Response gibt eine Array von Strings zurück, wie  können wir das verallgemeinern? 
+// Nicht jedes Response gibt ein Array von Strings zurück, wie können wir das verallgemeinern? 
 // 😱🙋‍♀️🙋‍♂️
 
 type ErrorResponse = { error: string };
