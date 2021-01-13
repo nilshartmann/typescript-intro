@@ -3,8 +3,9 @@
   "files.exclude": {
     "node_modules/": true,
     "dist/**/*.map":true,
-    "slides/": false,
-    "src_old/":true
+    "slides/": true,
+    "src_old/":true,
+    "src_de/":true
   },
     "editor.snippetSuggestions":"none",
     "editor.fontLigatures": false,
