@@ -10,7 +10,7 @@ type Person = {
 async function patchPerson(p: Person) {
   // ...how can we make sure that in this function.
   // the passed Person object is not modified?
-  // 😱🙋🙋
+  // 😱🙋‍♀️🙋‍♂️
 
   await fetch("/api/person", {
     method: "PATCH",
@@ -29,7 +29,7 @@ patchPerson(klaus); // OK
 
 // ... but how do we use a "part" of the person?
 // e.g. to "patch" only the Id and the age?
-// 😱🙋🙋
+// 😱🙋‍♀️🙋‍♂️
 const susi = {
   id: "123",
   age: 34
