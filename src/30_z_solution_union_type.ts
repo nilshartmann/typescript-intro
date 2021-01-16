@@ -22,4 +22,19 @@ class Cat {
 new Cat('Purry'); // cool
 // new Cat('Brutus'); // not cool
 
+// 2. Create a new subtype of Cat adding topSpeed without using extends 
+
+type CatAndMore = Cat & {
+  topSpeed: number;
+}
+
+const fastCat: CatAndMore = {
+  name: "Molly",
+  topSpeed: 10,
+  meow: () => console.log("woooof")
+}
+
+
+
+// https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html
 // https://www.typescriptlang.org/play?q=129#example/union-and-intersection-types
