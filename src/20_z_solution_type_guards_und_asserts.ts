@@ -18,7 +18,7 @@ function getSomething(what: string): unknown {
 
 // const what = 'ale';
 const what = 'beer';
-const something = getSomething('beer');
+const something = getSomething(what);
 if (isAvailable(something)) {
   console.log(`We have ${something.amount} ${something.type} of ${what}`)
 } else {

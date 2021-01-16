@@ -21,7 +21,7 @@ function getSomething(what: string): unknown {
 
 // const what = 'ale';
 const what = 'beer';
-const something = getSomething('beer');
+const something = getSomething(what);
 // 😱 THIS ONE DOESN'T WORK, HOW DO WE GET IT TO WORK?
 // console.log(`We have ${something.amount} ${something.type} of ${what}`)
 

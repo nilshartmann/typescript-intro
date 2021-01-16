@@ -16,8 +16,8 @@ assertValidData(x); // in this fictional use-case we expect
 
 x.toLowerCase(); // ok, string;
 
-  // but can you generalize this example to any type and not only string?
-  // 😱🙋‍♀️🙋‍♂️
+// but can you generalize this example to any type and not only string?
+// 😱🙋‍♀️🙋‍♂️
 
 
 // - https://www.typescriptlang.org/docs/handbook/2/conditional-types.html 
