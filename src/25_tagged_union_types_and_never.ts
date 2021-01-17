@@ -2,8 +2,7 @@ export default undefined;
 
 // Idea:
 // client requests "actions" from the server and then executes them
-// We don't create the action objects, but get them ready to use
-// so we have no influence on how they look like
+// We don't create the action objects, but get them ready to use via HTTP endpoint (JSON)
 
 type VerifyIbanAction = {
   iban: string;

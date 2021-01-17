@@ -1,12 +1,11 @@
 export default undefined;
 
-
 // TASK 🤔:
-// Move in the other direction and build up your type from the bottom instead of reducing them. 
-// Start with the given function and use it to end up with the original type of Person again. 
+// Move in the other direction and build up your type from the bottom instead of reducing them.
+// Start with the given function and use it to end up with the original type of Person again.
 // The following links could be useful
 // - ReturnType: https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype
-// - How to extend a type alias: 
+// - How to extend a type alias:
 // - https://www.typescriptlang.org/docs/handbook/advanced-types.html#interfaces-vs-type-aliases
 // - https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#intersection-types
 
@@ -18,11 +17,11 @@ function enterNewPersonForm() {
   };
 }
 
-type returnType = ReturnType<typeof enterNewPersonForm>;
+type NewPerson = ReturnType<typeof enterNewPersonForm>;
 
-type Person = returnType & {
-  id: string
-}
+type Person = NewPerson & {
+  id: string;
+};
 
 const klaus: Person = {
   id: "1",
@@ -30,7 +29,6 @@ const klaus: Person = {
   age: 34,
   hobby: "TypeScript!"
 };
-
 
 // https://www.typescriptlang.org/docs/handbook/utility-types.html
 // https://www.typescriptlang.org/play?q=414#example/mapped-types
