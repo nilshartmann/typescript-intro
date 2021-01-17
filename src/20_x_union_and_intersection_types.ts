@@ -1,10 +1,14 @@
 export default undefined;
 
 // This function takes a string...
+// how can it also take an object for specifing i18n params like a key and params?
+//   type Message = { key: string, params: string[] }
 
 type Message = { key: string; params: string[] };
 
+// how can we enhance the object with a default locale?
 type MessageWithLocale = Message & {
+  // how can we ensure that the locale is a valid identifier ("de", "en", ...)
   locale: "en" | "de";
 };
 
@@ -20,13 +24,6 @@ function greet(greeting: string | Message | MessageWithLocale) {
   }
 }
 
-// how can it also take an object for specifing i18n params like a key and params?
-//   { key: string, params: string[] }
-
-// how can we enhance the object with a default locale?
-// how can we ensure that the locale is a valid identifier ("de", "en", ...)
-// how can we create a factory function for the english locale?
-
 greet("Hello!");
 greet({
   key: "hello",
@@ -34,6 +31,7 @@ greet({
   locale: "de"
 });
 
+// how can we create a factory function for the english locale?
 function createEnglishLocale() {
   return "en" as const;
 }
@@ -43,8 +41,3 @@ greet({
   params: ["World"],
   locale: createEnglishLocale()
 });
-
-// how can it also take an object for specifing i18n params like a key and params?
-//   { key: string, params: string[] }
-
-// how can we enhance the object with a default locale?
