@@ -3,14 +3,17 @@ export default undefined;
 // QUESTION 🤔:
 // how many errors does this file contain? 🙋🙋
 //
-// Insert "// @ts-check" at the beginning of the file to resolve.
+// To resolve either
+// a) insert "// @ts-check" at the very beginning of the file
+// b) rename to .ts
+// c) copy into playground
 
 /**
  * @param {string} name  The name
  * @param {number} age The age
  * @param {string|undefined} [hobby] The person's hobby
  */
-export function newPerson(name, age, hobby) {
+function newPerson(name, age, hobby) {
   const p = {
     nane,
     age,
@@ -20,7 +23,7 @@ export function newPerson(name, age, hobby) {
   };
 }
 
-export function getAdultAge() {
+function getAdultAge() {
   return "18";
 }
 

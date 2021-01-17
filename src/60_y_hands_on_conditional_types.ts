@@ -1,3 +1,4 @@
+export default undefined;
 
 // TASKS 🤔:
 // 1. Replace our "Present" type with the "NonNullable" utility type - what is the difference?

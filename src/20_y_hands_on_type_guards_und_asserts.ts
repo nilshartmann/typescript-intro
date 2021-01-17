@@ -3,11 +3,6 @@ export default undefined;
 // TASK 🤔:
 // Process the return of type unknown so that you can work with it reasonably.
 
-type Something = {
-  type: string,
-  amount: number
-}
-
 function getSomething(what: string): unknown {
   if (what === 'beer') {
     return {

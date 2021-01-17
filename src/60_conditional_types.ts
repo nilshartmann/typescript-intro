@@ -1,3 +1,9 @@
+export default undefined;
+
+// we have an api that might return something based on the input
+declare function getDataFromApi(path: string): null | string;
+// we are sure this returns a string
+const x = getDataFromApi("path/can/never/return/null"); // x: string | null
 
 // type assertions are great to narrow down a given type
 
@@ -8,12 +14,7 @@ export function assertValidData(data: string | null): asserts data is string {
   }
 }
 
-declare function getDataFromApi(path: string): null | string;
-
-const x = getDataFromApi("path/can/never/return/null"); // x: string | null
-assertValidData(x); // in this fictional use-case we expect
-// x is never null
-
+assertValidData(x);
 x.toLowerCase(); // ok, string;
 
 // but can you generalize this example to any type and not only string?

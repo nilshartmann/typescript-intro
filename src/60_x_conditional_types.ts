@@ -1,3 +1,5 @@
+export default undefined;
+
 // Present: remove 'undfined' oder 'null' from a type
 type Present<T> = T extends undefined ? never : T extends null ? never : T;
 

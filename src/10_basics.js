@@ -1,15 +1,45 @@
+// hack: make sure this module is "private"
 export default undefined;
 
-let person = "Klaus";
+// 1. Type Annotations
 
-person = 32;
+let foo;
+foo = 'yo';
+foo = 10;
 
-person = true;
+// 2. Inference and types on functions
 
-person = function sayHello() {
-  return "Hello";
-};
+function sayIt(what) {
+    return `Saying: ${what}`;
+}
 
-person();
+const said = sayIt('Hello!');
 
-person = null;
+// 3. Classes
+
+class Sayer {
+
+    constructor(what) {
+        this.what = what;
+    }
+
+    sayIt() {
+        return `Saying: ${this.what}`;
+    }
+}
+
+const sayer = new Sayer('Hello!');
+sayer.sayIt()
+sayer.what
+
+// 4. Null Checks
+
+function fooFunc(num) {
+    if (num > 10) {
+        return 'cool';
+    }
+    return null;
+}
+
+const fooed = fooFunc(11);
+fooed.toString();

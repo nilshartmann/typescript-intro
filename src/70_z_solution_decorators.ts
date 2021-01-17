@@ -44,7 +44,7 @@ function validate<T>(
 
 const order: any = new Order('beer', 10);
 order.type = new String("ale");
-// order.type = false // throws at runtime
+order.type = false // throws at runtime
 
 
 // 2. write a "frozen" decorator that applies Object.freeze to a class. Use the class in such a way that it throws a runtime error.

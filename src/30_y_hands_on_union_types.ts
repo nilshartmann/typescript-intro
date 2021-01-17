@@ -23,4 +23,5 @@ new Cat('Purry'); // cool
 new Cat('Brutus'); // not cool
 
 // https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html
+// https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#intersection-types
 // https://www.typescriptlang.org/play?q=129#example/union-and-intersection-types

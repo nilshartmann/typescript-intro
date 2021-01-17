@@ -44,7 +44,7 @@ function validate<T>(
 
 const order: any = new Order('beer', 10);
 order.type = new String("ale");
-order.type = false; // this should not be possible
+order.type = false; // this should not be possible at runtime
 
 // Links
 // https://www.typescriptlang.org/docs/handbook/decorators.html
