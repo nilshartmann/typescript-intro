@@ -23,7 +23,8 @@ animals.push(new Dog())
 animals.push(new Cat())
 
 // 2. Create an array that should contain only cats. Can you find a way to sneak in a dog?
-
+// TS's type system deliberately compromises soundness for usability at certain points 
+// https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness
 let cats: Array<Cat> = [];
 // cats.push(new Dog()) // nope
 cats.push(new Cat())
