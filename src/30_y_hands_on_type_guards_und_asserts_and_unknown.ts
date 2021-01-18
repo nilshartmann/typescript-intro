@@ -4,18 +4,18 @@ export default undefined;
 // Process the return of type unknown so that you can work with it reasonably.
 
 function getSomething(what: string): unknown {
-  if (what === 'beer') {
+  if (what === "beer") {
     return {
-      type: 'bootles',
+      type: "bottles",
       amount: 10
     };
   } else {
-    return 'n/a';
+    return "n/a";
   }
 }
 
 // const what = 'ale';
-const what = 'beer';
+const what = "beer";
 const something = getSomething(what);
 // 😱 THIS ONE DOESN'T WORK, HOW DO WE GET IT TO WORK?
 // console.log(`We have ${something.amount} ${something.type} of ${what}`)
