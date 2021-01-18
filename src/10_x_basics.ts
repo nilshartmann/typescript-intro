@@ -57,3 +57,4 @@ fooed!.toString();
 const certainly = fooed!;
 
 // https://www.typescriptlang.org/docs/handbook/basic-types.html
+// https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin

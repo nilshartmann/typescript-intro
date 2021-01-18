@@ -63,3 +63,4 @@ if (error) {
 // - https://www.typescriptlang.org/docs/handbook/advanced-types.html#conditional-types 
 // - https://github.com/microsoft/TypeScript/pull/40002 
 // - https://stackoverflow.com/questions/60067100/why-is-the-infer-keyword-needed-in-typescript 
+// - https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
