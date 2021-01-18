@@ -37,3 +37,6 @@ function translate(msg: Translate) {
 function invalidTranslation(msg: never) {
   throw new Error("Invalid Msg Object!");
 }
+
+// also called discriminating unions
+// https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#discriminating-unions
