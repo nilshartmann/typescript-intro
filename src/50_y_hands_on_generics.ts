@@ -1,7 +1,7 @@
 export default undefined;
 
 // TASKS 🤔:
-// 1. use the given taxonomy of animals and an array that can contain all of them and only them.
+// 1. use the given taxonomy of animals and create an array that can contain all of them and only them.
 // 2. Create an array that should contain only cats. Can you find a way to sneak in a dog?
 
 abstract class Animal {

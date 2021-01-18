@@ -1,7 +1,7 @@
 export default undefined;
 
 // TASKS 🤔:
-// 1. use the given taxonomy of animals and an array that can contain all of them and only them.
+// 1. use the given taxonomy of animals and create an array that can contain all of them and only them.
 
 abstract class Animal {
 }
