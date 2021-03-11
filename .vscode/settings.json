@@ -4,8 +4,9 @@
     "node_modules/": true,
     "dist/**/*.map":true,
     "slides/": true,
-    "src_old/":true,
-    "src_de/":true
+    ".material/": true,
+    ".git*": true,
+    "*.prettier*": true
   },
     "editor.snippetSuggestions":"none",
     "editor.fontLigatures": false,
